@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* Primary  */
+  --Red: #ea5353;
+  --Cyan: #45d3d3;
+  --Orange: #fcaf4a;
+  --Blue: #549ef2;
+
+  /* Neutral */
+  --Very-Dark-Blue: #4c4e61;
+  --Grayish-Blue: #a3a5ae;
+  --Very-Light-Gray: #fafafa;
+  --White: #fff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* automatically inherit box-sizing from the body element */
+  /* box-sizing: inherit; */
+  box-sizing: border-box;
+}
+
+/* setting the root font-size  */
+html {
+  box-sizing: border-box;
+  /* change to 1px so that we know that 1rem will equal 10px */
+  /* change the 10px to a percentage which will translate to the percentage given by the browser */
+  /* 10/16*100 */
+  /* this method is used when a user decides to adjust the font size on the browser  */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--Very-Light-Gray);
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.1rem;
+  font-weight: 300;
+  color: var(--Very-Dark-Blue);
+}
+
+h1:nth-child(2) {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 300;
+  color: var(--Grayish-Blue);
+}
+
+p {
+  color: var(--Grayish-Blue);
+  font-weight: 300;
+}
+
+/* .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+} */
+
+/* Title */
+.title {
+  padding: 3.5rem;
+  text-align: center;
+  width: 60rem;
+  margin: 0 auto;
+}
+
+h1:nth-child(2) {
+  padding-bottom: 1.5rem;
+}
+
+.title h3 {
+  font-size: 1.6rem;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+.card__content {
+  width: 35rem;
+  height: 25.4rem;
+  padding: 3.5rem 3.2rem;
+  margin: 3rem;
+  background: var(--White);
+  box-shadow: 0 8px 16px 0 rgba(78, 74, 122, 0.2);
+  /* position: relative; */
+}
+
+.cards {
+  position: relative;
+  border-radius: 1.1.155rem;
+}
+
+.cards::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.4rem;
+  border-top-left-radius: 1.15rem;
+  border-top-right-radius: 1.15rem;
+  background-color: #378fe6;
+}
+
+.cards--cyan::before {
+  background: var(--Cyan);
+}
+
+.cards--red::before {
+  background: var(--Red);
+}
+
+.cards--orange::before {
+  background: var(--Orange);
+}
+
+.card__content h2 {
+  color: var(--Very-Dark-Blue);
+  padding-bottom: 0.9rem;
+}
+
+.card__content p {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.card__content img {
+  display: block;
+  width: 6.8rem;
+  height: 6.8rem;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.card-push {
+  transform: translateY(50%);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 885px) {
+  .title {
+    padding: 4.6rem 2rem;
+    width: 40rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .title h3 {
+    font-size: 1.8rem;
+  }
+
+  .card-push {
+    transform: translateY(0);
+  }
+}
